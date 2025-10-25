@@ -132,29 +132,3 @@ src/
 VITE_API_URL=https://api.scholarsphere.com/api
 VITE_ENABLE_MOCK_DATA=false
 ```
-
-### 构建优化
-
-- 启用代码分割
-- 压缩静态资源
-- 优化图片加载
-- 配置 CDN 加速
-
-## 贡献指南
-
-1. Fork 项目
-2. 创建功能分支
-3. 提交更改
-4. 推送到分支
-5. 创建 Pull Request
-
-## 许可证
-
-MIT License
-
-## 联系方式
-
-如有问题或建议，请通过以下方式联系：
-
-- 邮箱: support@scholarsphere.com
-- GitHub Issues: [项目 Issues 页面]
