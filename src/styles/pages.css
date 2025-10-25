@@ -1,0 +1,369 @@
+/* 页面特定样式文件 */
+
+/* 首页样式 */
+.home-page {
+  @apply min-h-screen bg-gray-50;
+}
+
+.home-hero {
+  @apply bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20;
+}
+
+.home-hero-content {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center;
+}
+
+.home-hero-title {
+  @apply text-4xl md:text-6xl font-bold mb-6;
+}
+
+.home-hero-subtitle {
+  @apply text-xl md:text-2xl mb-8 text-indigo-100;
+}
+
+.home-hero-cta {
+  @apply inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50;
+}
+
+/* 个人资料页面样式 */
+.profile-page {
+  @apply min-h-screen bg-gray-50;
+}
+
+.profile-header {
+  @apply bg-white shadow-sm;
+}
+
+.profile-content {
+  @apply max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8;
+}
+
+.profile-grid {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-8;
+}
+
+.profile-main {
+  @apply lg:col-span-2 space-y-8;
+}
+
+.profile-sidebar {
+  @apply lg:col-span-1 space-y-8;
+}
+
+/* 搜索页面样式 */
+.search-page {
+  @apply min-h-screen bg-gray-50;
+}
+
+.search-header {
+  @apply bg-white shadow-sm mb-8;
+}
+
+.search-content {
+  @apply max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8;
+}
+
+.search-filters {
+  @apply bg-white p-6 rounded-xl shadow-md mb-8;
+}
+
+.search-results {
+  @apply space-y-6;
+}
+
+.search-result-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+/* 职位页面样式 */
+.jobs-page {
+  @apply min-h-screen bg-gray-50;
+}
+
+.jobs-header {
+  @apply bg-white shadow-sm mb-8;
+}
+
+.jobs-content {
+  @apply max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8;
+}
+
+.jobs-search {
+  @apply bg-white p-6 rounded-xl shadow-md mb-8;
+}
+
+.jobs-list {
+  @apply bg-white rounded-xl shadow-md overflow-hidden;
+}
+
+.job-item {
+  @apply p-6 hover:bg-gray-50 border-b border-gray-200 last:border-b-0;
+}
+
+.job-item-content {
+  @apply flex flex-col sm:flex-row justify-between;
+}
+
+.job-item-info {
+  @apply flex-1;
+}
+
+.job-item-title {
+  @apply text-lg font-semibold text-indigo-600 mb-2;
+}
+
+.job-item-organization {
+  @apply text-sm text-gray-700 mb-1;
+}
+
+.job-item-location {
+  @apply text-sm text-gray-500;
+}
+
+.job-item-actions {
+  @apply mt-2 sm:mt-0 flex-shrink-0;
+}
+
+.job-item-tags {
+  @apply mt-3 flex items-center gap-2 flex-wrap;
+}
+
+.job-tag {
+  @apply px-2 py-1 text-xs font-medium rounded-full;
+}
+
+.job-tag-type {
+  @apply text-green-800 bg-green-100;
+}
+
+.job-tag-skill {
+  @apply text-blue-800 bg-blue-100;
+}
+
+/* 网络页面样式 */
+.network-page {
+  @apply min-h-screen bg-gray-50;
+}
+
+.network-header {
+  @apply bg-white shadow-sm mb-8;
+}
+
+.network-content {
+  @apply max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8;
+}
+
+.network-stats {
+  @apply bg-white p-6 rounded-xl shadow-md mb-8;
+}
+
+.network-stats-grid {
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-6;
+}
+
+.network-stat {
+  @apply text-center;
+}
+
+.network-stat-number {
+  @apply text-3xl font-bold text-indigo-600 mb-2;
+}
+
+.network-stat-label {
+  @apply text-sm text-gray-500;
+}
+
+.network-invitations {
+  @apply bg-white p-6 rounded-xl shadow-md;
+}
+
+.network-invitation {
+  @apply py-4 flex items-center justify-between border-b border-gray-200 last:border-b-0;
+}
+
+.network-invitation-info {
+  @apply flex items-center space-x-4;
+}
+
+.network-invitation-avatar {
+  @apply h-14 w-14 rounded-full;
+}
+
+.network-invitation-details {
+  @apply flex-1;
+}
+
+.network-invitation-name {
+  @apply font-semibold text-gray-800 text-lg;
+}
+
+.network-invitation-title {
+  @apply text-sm text-gray-500;
+}
+
+.network-invitation-message {
+  @apply text-sm text-gray-500 mt-1;
+}
+
+.network-invitation-actions {
+  @apply flex space-x-2 flex-shrink-0;
+}
+
+/* 登录页面样式 */
+.login-page {
+  @apply min-h-screen bg-gray-50 flex items-center justify-center;
+}
+
+.login-container {
+  @apply w-full max-w-md p-8 space-y-8 bg-white rounded-xl shadow-lg;
+}
+
+.login-header {
+  @apply text-center;
+}
+
+.login-logo {
+  @apply flex justify-center items-center mb-6;
+}
+
+.login-title {
+  @apply text-3xl font-extrabold text-gray-900;
+}
+
+.login-form {
+  @apply mt-8 space-y-6;
+}
+
+.login-form-group {
+  @apply rounded-md shadow-sm -space-y-px;
+}
+
+.login-form-input {
+  @apply appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm;
+}
+
+.login-form-input:first-child {
+  @apply rounded-t-md;
+}
+
+.login-form-input:last-child {
+  @apply rounded-b-md;
+}
+
+.login-form-options {
+  @apply flex items-center justify-between;
+}
+
+.login-form-checkbox {
+  @apply flex items-center;
+}
+
+.login-form-checkbox input {
+  @apply h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded;
+}
+
+.login-form-checkbox label {
+  @apply ml-2 block text-sm text-gray-900;
+}
+
+.login-form-forgot {
+  @apply text-sm;
+}
+
+.login-form-forgot a {
+  @apply font-medium text-indigo-600 hover:text-indigo-500;
+}
+
+.login-form-submit {
+  @apply relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+}
+
+.login-form-signup {
+  @apply mt-2 text-center text-sm text-gray-600;
+}
+
+.login-form-signup a {
+  @apply font-medium text-indigo-600 hover:text-indigo-500;
+}
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+  .home-hero-title {
+    @apply text-3xl;
+  }
+
+  .home-hero-subtitle {
+    @apply text-lg;
+  }
+
+  .profile-grid {
+    @apply grid-cols-1;
+  }
+
+  .search-result-grid {
+    @apply grid-cols-1;
+  }
+
+  .network-stats-grid {
+    @apply grid-cols-1;
+  }
+
+  .job-item-content {
+    @apply flex-col;
+  }
+
+  .network-invitation {
+    @apply flex-col items-start space-y-4;
+  }
+
+  .network-invitation-actions {
+    @apply w-full justify-end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .profile-content {
+    @apply py-12;
+  }
+
+  .search-content {
+    @apply py-12;
+  }
+
+  .jobs-content {
+    @apply py-12;
+  }
+
+  .network-content {
+    @apply py-12;
+  }
+}
+
+/* 暗色主题适配 */
+[data-theme="dark"] .home-page,
+[data-theme="dark"] .profile-page,
+[data-theme="dark"] .search-page,
+[data-theme="dark"] .jobs-page,
+[data-theme="dark"] .network-page {
+  @apply bg-gray-900;
+}
+
+[data-theme="dark"] .login-page {
+  @apply bg-gray-900;
+}
+
+[data-theme="dark"] .login-container {
+  @apply bg-gray-800;
+}
+
+[data-theme="dark"] .login-title {
+  @apply text-white;
+}
+
+[data-theme="dark"] .login-form-checkbox label {
+  @apply text-gray-300;
+}
+
+[data-theme="dark"] .login-form-signup {
+  @apply text-gray-400;
+}
