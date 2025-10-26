@@ -112,9 +112,7 @@ VITE_ENABLE_MOCK_DATA=true
 ### 生产构建
 
 ```bash
-npm run build
+npm run dev
 ```
-
-构建文件将输出到 `dist/` 目录。---
 
 **注意**: 这是一个演示项目，使用模拟数据。在生产环境中使用时，请确保连接到真实的后端 API。
