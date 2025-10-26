@@ -1,12 +1,24 @@
 // API基础配置和通用方法
+
+// API基础URL配置
 const API_BASE_URL =
   import.meta.env.VITE_API_URL || "http://localhost:3001/api";
 
+/**
+ * API客户端类
+ * 提供统一的HTTP请求接口
+ */
 class ApiClient {
   constructor() {
     this.baseURL = API_BASE_URL;
   }
 
+  /**
+   * 通用请求方法
+   * @param {string} endpoint - API端点
+   * @param {Object} options - 请求选项
+   * @returns {Promise<Object>} API响应数据
+   */
   async request(endpoint, options = {}) {
     const url = `${this.baseURL}${endpoint}`;
     const config = {
@@ -38,12 +50,24 @@ class ApiClient {
     }
   }
 
+  /**
+   * GET请求
+   * @param {string} endpoint - API端点
+   * @param {Object} params - 查询参数
+   * @returns {Promise<Object>} API响应数据
+   */
   async get(endpoint, params = {}) {
     const queryString = new URLSearchParams(params).toString();
     const url = queryString ? `${endpoint}?${queryString}` : endpoint;
     return this.request(url, { method: "GET" });
   }
 
+  /**
+   * POST请求
+   * @param {string} endpoint - API端点
+   * @param {Object} data - 请求数据
+   * @returns {Promise<Object>} API响应数据
+   */
   async post(endpoint, data) {
     return this.request(endpoint, {
       method: "POST",
@@ -51,6 +75,12 @@ class ApiClient {
     });
   }
 
+  /**
+   * PUT请求
+   * @param {string} endpoint - API端点
+   * @param {Object} data - 请求数据
+   * @returns {Promise<Object>} API响应数据
+   */
   async put(endpoint, data) {
     return this.request(endpoint, {
       method: "PUT",
@@ -58,9 +88,15 @@ class ApiClient {
     });
   }
 
+  /**
+   * DELETE请求
+   * @param {string} endpoint - API端点
+   * @returns {Promise<Object>} API响应数据
+   */
   async delete(endpoint) {
     return this.request(endpoint, { method: "DELETE" });
   }
 }
 
+// 导出API客户端实例
 export default new ApiClient();

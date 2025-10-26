@@ -3,6 +3,7 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import ProfileCard from "../components/profile/ProfileCard";
 import AboutSection from "../components/profile/AboutSection";
+import EducationSection from "../components/profile/EducationSection";
 import ExperienceTimeline from "../components/profile/ExperienceTimeline";
 import PublicationsList from "../components/profile/PublicationsList";
 import {
@@ -11,11 +12,16 @@ import {
   getPublicationsByUserId,
 } from "../data/mockData";
 
+/**
+ * 主页组件
+ * 显示用户的个人资料、教育背景、工作经历、出版物等信息
+ * @returns {JSX.Element} 主页组件
+ */
 const HomePage = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  // Redirect to login page if user is not logged in
+  // 如果用户未登录，重定向到登录页面
   if (!user) {
     navigate("/login");
     return null;
@@ -29,10 +35,11 @@ const HomePage = () => {
   return (
     <main className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Left Column */}
+        {/* 左侧主要内容区域 */}
         <div className="lg:col-span-2 space-y-8">
           <ProfileCard user={currentUser} isOwnProfile={true} />
           <AboutSection about={currentUser.bio} />
+          <EducationSection education={currentUser.education} />
           <ExperienceTimeline experiences={currentUser.experience} />
           <PublicationsList
             publications={userPublications.map((pub) => ({
@@ -49,9 +56,9 @@ const HomePage = () => {
           />
         </div>
 
-        {/* Right Sidebar */}
+        {/* 右侧边栏 */}
         <div className="lg:col-span-1 space-y-8">
-          {/* Available Positions */}
+          {/* 可用职位 */}
           <div className="bg-white p-6 rounded-xl shadow-md">
             <h2 className="text-xl font-bold text-gray-800 mb-4">
               Available Positions
@@ -82,7 +89,7 @@ const HomePage = () => {
             </button>
           </div>
 
-          {/* Scholars You May Know */}
+          {/* 推荐学者 */}
           <div className="bg-white p-6 rounded-xl shadow-md">
             <h2 className="text-xl font-bold text-gray-800 mb-4">
               Scholars You May Know

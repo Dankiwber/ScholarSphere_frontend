@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer, useEffect } from "react";
 
-// 主题常量
+// 主题常量定义
 const THEMES = {
   LIGHT: "light",
   DARK: "dark",
@@ -13,13 +13,18 @@ const initialState = {
   isDark: false,
 };
 
-// Action类型
+// Action类型常量
 const THEME_ACTIONS = {
   SET_THEME: "SET_THEME",
   TOGGLE_THEME: "TOGGLE_THEME",
 };
 
-// Reducer函数
+/**
+ * 主题状态管理Reducer
+ * @param {Object} state - 当前状态
+ * @param {Object} action - 动作对象
+ * @returns {Object} 新状态
+ */
 const themeReducer = (state, action) => {
   switch (action.type) {
     case THEME_ACTIONS.SET_THEME:
@@ -41,10 +46,13 @@ const themeReducer = (state, action) => {
   }
 };
 
-// 创建Context
+// 创建主题上下文
 const ThemeContext = createContext();
 
-// 获取系统主题偏好
+/**
+ * 获取系统主题偏好
+ * @returns {string} 系统主题偏好
+ */
 const getSystemTheme = () => {
   if (typeof window !== "undefined" && window.matchMedia) {
     return window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -54,7 +62,11 @@ const getSystemTheme = () => {
   return THEMES.LIGHT;
 };
 
-// 应用主题到DOM
+/**
+ * 应用主题到DOM元素
+ * @param {string} theme - 主题名称
+ * @param {boolean} isDark - 是否为暗色主题
+ */
 const applyTheme = (theme, isDark) => {
   if (typeof document !== "undefined") {
     const root = document.documentElement;
@@ -70,11 +82,17 @@ const applyTheme = (theme, isDark) => {
   }
 };
 
-// Provider组件
+/**
+ * 主题上下文提供者组件
+ * 管理应用的主题状态和切换功能
+ * @param {Object} props - 组件属性
+ * @param {React.ReactNode} props.children - 子组件
+ * @returns {JSX.Element} 主题上下文提供者
+ */
 export const ThemeProvider = ({ children }) => {
   const [state, dispatch] = useReducer(themeReducer, initialState);
 
-  // 初始化主题
+  // 初始化主题设置
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     const theme = savedTheme || THEMES.SYSTEM;
@@ -114,7 +132,10 @@ export const ThemeProvider = ({ children }) => {
     applyTheme(state.theme, state.isDark);
   }, [state.theme, state.isDark]);
 
-  // 设置主题
+  /**
+   * 设置主题
+   * @param {string} theme - 主题名称
+   */
   const setTheme = (theme) => {
     let isDark = false;
     if (theme === THEMES.SYSTEM) {
@@ -132,18 +153,26 @@ export const ThemeProvider = ({ children }) => {
     localStorage.setItem("theme", theme);
   };
 
-  // 切换主题
+  /**
+   * 切换主题（在亮色和暗色之间切换）
+   */
   const toggleTheme = () => {
     const newTheme = state.theme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
     setTheme(newTheme);
   };
 
-  // 获取当前主题
+  /**
+   * 获取当前主题
+   * @returns {string} 当前主题
+   */
   const getCurrentTheme = () => {
     return state.theme;
   };
 
-  // 检查是否为暗色主题
+  /**
+   * 检查是否为暗色主题
+   * @returns {boolean} 是否为暗色主题
+   */
   const isDarkMode = () => {
     return state.isDark;
   };
@@ -163,7 +192,11 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-// 自定义Hook
+/**
+ * 主题上下文的自定义Hook
+ * 提供主题状态和操作方法
+ * @returns {Object} 主题上下文值
+ */
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) {

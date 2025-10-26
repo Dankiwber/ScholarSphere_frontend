@@ -64,6 +64,7 @@ export const users = [
         {
           position: "Professor",
           company: "University of Alberta",
+          location: "Edmonton, Canada",
           duration: "2018-Present",
           description:
             "Advising PhD and MSc students on cutting-edge reinforcement learning research.",
@@ -71,6 +72,7 @@ export const users = [
         {
           position: "Postdoctoral Researcher",
           company: "Stanford AI Lab",
+          location: "Stanford, CA, USA",
           duration: "2016-2018",
           description:
             "Focused on deep reinforcement learning algorithms for robotic manipulation.",
@@ -115,12 +117,14 @@ export const users = [
         {
           position: "Assistant Professor",
           company: "Tsinghua University",
+          location: "Beijing, China",
           duration: "2021-Present",
           description: "Teaching and research in natural language processing.",
         },
         {
           position: "Postdoctoral Researcher",
           company: "Carnegie Mellon University",
+          location: "Pittsburgh, PA, USA",
           duration: "2019-2021",
           description:
             "Research in large language models and machine translation.",
@@ -165,6 +169,7 @@ export const users = [
         {
           position: "Postdoctoral Researcher",
           company: "MIT",
+          location: "Cambridge, MA, USA",
           duration: "2020-Present",
           description: "Research in computer vision and deep learning.",
         },
@@ -208,6 +213,7 @@ export const users = [
         {
           position: "PhD Candidate",
           company: "Stanford University",
+          location: "Stanford, CA, USA",
           duration: "2021-Present",
           description:
             "Research in human-computer interaction and accessibility.",
@@ -221,17 +227,17 @@ export const users = [
   {
     id: 5,
     slug: "yejin-choi-6q8w3e1r7",
-    username: "yejin_choi",
-    email: "yejin@uw.edu",
+    username: "yujie_wen",
+    email: "yujie@ulberta.edu",
     password: "password123",
     profile: {
-      name: "Yejin Choi",
+      name: "Yujie Wen",
       title: "Professor",
       studyField: "Natural Language Processing",
-      organization: "University of Washington",
-      location: "Seattle, WA, USA",
-      avatar: "https://placehold.co/256x256/fefce8/854d0e?text=YC",
-      bio: "Professor Yejin Choi is a leading researcher in natural language processing and computational linguistics. Her work focuses on understanding and generating human language with AI systems.",
+      organization: "University of ALberta",
+      location: "Edmonton, AB, Canada",
+      avatar: "https://placehold.co/256x256/fefce8/854d0e?text=YJ",
+      bio: "Professor Yujie Wen is a leading researcher in natural language processing and computational linguistics. His work focuses on understanding and generating human language with AI systems.",
       skills: [
         "Python",
         "TensorFlow",
@@ -242,17 +248,24 @@ export const users = [
       publications: [7],
       education: [
         {
-          degree: "PhD in Computer Science",
-          institution: "Cornell University",
-          year: "2010-2015",
+          degree: "Master in AI and Data Science",
+          institution: "University of Waterloo",
+          year: "2025-2027",
+          status: "Completed",
+        },
+        {
+          degree: "Bachlor in Computer Science",
+          institution: "University of Alberta",
+          year: "2021-2025",
           status: "Completed",
         },
       ],
       experience: [
         {
           position: "Professor",
-          company: "University of Washington",
-          duration: "2019-Present",
+          company: "Massachusetts Institute of Technology",
+          location: "Cambridge, MA, USA",
+          duration: "2027-Present",
           description: "Teaching and research in natural language processing.",
         },
       ],
@@ -295,6 +308,7 @@ export const users = [
         {
           position: "Professor",
           company: "UC Berkeley",
+          location: "Berkeley, CA, USA",
           duration: "1976-Present",
           description: "Teaching and research in computer architecture.",
         },
