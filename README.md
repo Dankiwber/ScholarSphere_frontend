@@ -2,7 +2,7 @@
 
 一个现代化的学术社交网络平台前端应用，专为研究者和学者设计。
 
-## 🚀 快速开始
+## 快速开始
 
 ### 环境要求
 
@@ -24,7 +24,7 @@ npm run build
 
 应用将在 `http://localhost:5173` 启动
 
-## 📋 功能特性
+## 功能特性
 
 - ✅ **用户认证** - 登录/注册系统
 - ✅ **学者搜索** - 按姓名、机构、研究领域搜索
@@ -33,14 +33,7 @@ npm run build
 - ✅ **个人资料** - 展示研究成果和经历
 - ✅ **响应式设计** - 支持移动端和桌面端
 
-## 🛠 技术栈
-
-- **React 19.1.1** - 前端框架
-- **React Router DOM 6.30.1** - 路由管理
-- **Tailwind CSS 3.4.15** - 样式框架
-- **Vite 7.1.10** - 构建工具
-
-## 📁 项目结构
+## 项目结构
 
 ```
 src/
@@ -58,7 +51,7 @@ src/
 └── utils/               # 工具函数
 ```
 
-## 🔐 测试账户
+## 测试账户
 
 项目包含以下测试用户（密码均为 `password123`）：
 
@@ -69,7 +62,7 @@ src/
 - **yejin_choi** - 教授，自然语言处理
 - **david_patterson** - 教授，计算机架构
 
-## 🌐 API 集成
+## API 集成
 
 项目使用模拟数据，但已准备好与后端 API 集成：
 
@@ -80,7 +73,7 @@ src/
 - **网络**: `/api/network/*` - 学术网络
 - **资料**: `/api/profiles/*` - 个人资料
 
-## 🎨 开发指南
+## 开发指南
 
 ### 代码规范
 
@@ -101,7 +94,7 @@ src/
 - 使用 React Context 进行状态管理
 - 实现适当的错误处理
 
-## 📦 构建和部署
+## 构建和部署
 
 ### 环境变量
 
@@ -122,27 +115,6 @@ VITE_ENABLE_MOCK_DATA=true
 npm run build
 ```
 
-构建文件将输出到 `dist/` 目录。
-
-## 🤝 贡献指南
-
-1. Fork 项目
-2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开 Pull Request
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
-
-## 📞 联系方式
-
-如有问题或建议，请通过以下方式联系：
-
-- 项目 Issues: [GitHub Issues](https://github.com/your-username/scholarsphere-frontend/issues)
-- 邮箱: your-email@example.com
-
----
+构建文件将输出到 `dist/` 目录。---
 
 **注意**: 这是一个演示项目，使用模拟数据。在生产环境中使用时，请确保连接到真实的后端 API。
